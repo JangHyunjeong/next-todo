@@ -1,13 +1,15 @@
-export default function TodoItem() {
+interface TodoItemType {
+  todoItem: string;
+}
+
+export default function TodoItem({ todoItem }: TodoItemType) {
   return (
     <>
       <div className="todo-item">
         <label htmlFor=""></label>
         <input type="checkbox" />
 
-        <span className="text">
-          안녕하세요 내용입니다. 내용입니다. 내용입니다.
-        </span>
+        <span className="text">{todoItem}</span>
 
         {/* 수정모드일때
         <textarea
