@@ -1,5 +1,7 @@
+import { NewTodoType } from "@/app/todos/type";
+
 interface TodoItemType {
-  todoItem: string;
+  todoItem: NewTodoType;
 }
 
 export default function TodoItem({ todoItem }: TodoItemType) {
@@ -9,7 +11,7 @@ export default function TodoItem({ todoItem }: TodoItemType) {
         <label htmlFor=""></label>
         <input type="checkbox" />
 
-        <span className="text">{todoItem}</span>
+        <span className="text">{todoItem.content}</span>
 
         {/* 수정모드일때
         <textarea

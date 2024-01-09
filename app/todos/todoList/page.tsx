@@ -1,7 +1,8 @@
 import TodoItem from "@/app/todos/todoItem/page";
+import { NewTodoType } from "../type";
 
 interface TodoArrayType {
-  todoArray: string[];
+  todoArray: NewTodoType[];
 }
 
 export default function TodoList({ todoArray }: TodoArrayType) {

@@ -1,5 +1,6 @@
+import { NewTodoType } from "../type";
 interface TodoFormType {
-  newTodo: string;
+  newTodo: NewTodoType;
   getNewTodo: (value: string) => void;
   addTodo: () => void;
 }
@@ -14,7 +15,7 @@ export default function TodoForm({
       <form>
         <input
           type="text"
-          value={newTodo}
+          value={newTodo.content}
           onChange={(e) => {
             getNewTodo(e.target.value);
           }}
